@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>UTFPR-Orientação Objetos</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cadastro de Estudantes</h1>
+    <input id="iptName" type="text" placeholder="Digite seu Nome" />
+    <input id="iptEmail" type="text" placeholder="Email" />
+    <input id="btnSave" type="button" value="Salvar" />
+    <input id="btnList" type="button" value="Listar" />
+
+    <p id="pgrName"></p>
+
+    <table border="1">
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+      <tbody id="tblStudent"></tbody>
+    </table>
+
+    <script src="src/studentView.ts"></script>
+  </body>
+</html>
