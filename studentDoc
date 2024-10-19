@@ -1,0 +1,38 @@
+
+// Importa a classe abstrata Person do módulo './Person'.
+import { Person } from "./Person";
+
+// Exporta a classe Student, que estende a classe Person.
+export class Student extends Person {
+  // ra é uma propriedade opcional que armazena o número de registro acadêmico do estudante.
+  ra?: string;
+}
+
+---------------------------
+A classe `Student` é uma subclasse da classe `Person`, o que significa que ela herda todas as propriedades e métodos da classe `Person`. Este é um exemplo clássico de herança, outro pilar da orientação a objetos.
+
+A herança permite que a classe `Student` reutilize o código já presente na classe `Person`, como o construtor que valida o nome e os métodos para manipular o email. Isso promove o reaproveitamento de código e a hierarquia de classes, tornando o código mais organizado e modular.
+
+A propriedade `ra` é uma string opcional que pode ser usada para armazenar o número de registro acadêmico de um estudante. Ser opcional significa que um objeto `Student` pode ser criado sem um número de registro, o que pode ser útil em situações onde esse dado não é imediatamente disponível ou não é necessário.
+
+Por ser uma classe que estende uma classe abstrata, a classe `Student` pode adicionar novos métodos e propriedades ou sobrescrever os existentes para comportamentos específicos de estudantes.
+
+Para usar a classe `Student`, você criaria instâncias dela, passando um nome para o construtor herdado de `Person` e, opcionalmente, definindo a propriedade `ra` após a criação do objeto. Por exemplo:
+
+
+const student = new Student("Maria Silva");
+student.setEmail("maria.silva@example.com");
+student.ra = "123456789";
+
+Este código criaria um novo estudante chamado "Maria Silva", definiria seu email e registraria um número de registro acadêmico para ela. A validação do nome e do email seria realizada pelos métodos herdados da classe `Person`.
+---------------------------------------------------------------------------
+
+A classe Student ilustra os seguintes conceitos de orientação a objetos:
+
+Herança: A classe Student estende a classe Person, herdando todas as propriedades e métodos da classe base. Isso significa que um Student é um tipo de Person com uma propriedade adicional ra (número de registro acadêmico), demonstrando o conceito de herança e especialização.
+
+Encapsulamento: A propriedade ra é opcional (?) e pública, o que significa que ela pode ser acessada diretamente por outras partes do código. Embora isso possa ser uma violação do encapsulamento ideal, é uma escolha de design que pode ser justificada dependendo do contexto da aplicação.
+
+Extensibilidade: Ao estender Person, Student pode adicionar novas propriedades e métodos ou sobrescrever os existentes para comportamentos específicos de estudantes, mantendo a compatibilidade com a interface de Person.
+
+Ambas as classes juntas demonstram como a orientação a objetos pode ser usada para criar um modelo de dados estruturado e reutilizável em aplicações
